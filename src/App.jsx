@@ -5,7 +5,7 @@ function App() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch("http://https://portfolio-xoar.onrender.com/api/projects")
+    fetch("https://portfolio-xoar.onrender.com/api/projects")
       .then((response) => response.json())
       .then((data) => setProjects(data))
       .catch((error) => console.error("Error fetching projects:", error));
