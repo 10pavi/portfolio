@@ -3,12 +3,12 @@ const cors = require("cors");
 const { MongoClient } = require("mongodb");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors());
 
-const uri = "mongodb://localhost:27017";
+const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
 
 let db;
